@@ -1,0 +1,44 @@
+div {
+    margin: 50px 0;
+    background-color: black;
+}
+
+div ul {
+    padding:0;
+    margin:0;
+    list-style: none;
+    position: relative;
+}
+
+div ul li {
+    margin: 0px -7px 0 0;
+    display:inline-block;
+    background-color: black;
+}
+div a {
+    display:block;
+    padding:0 10px;
+    color:#FFF;
+    font-size:20px;
+    text-decoration:none;
+}
+
+div a:hover {
+    background-color: red;
+}
+
+ul ul{
+    display: none;
+    position: absolute;
+}
+
+div ul li:hover > ul {
+    display:inherit;
+}
+
+div ul ul li {
+    width:100px;
+    height: 25px;
+    float:none;
+    display:list-item;
+}

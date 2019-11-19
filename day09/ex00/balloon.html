@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #MyDiv {
+                height: 200px;
+                width: 200px;
+                background: red;
+                border-radius: 50%;
+                margin: auto;
+            }
+        </style>
+        <script>
+        var size = 200;
+        var color = {0: '#ff0000', 1: '#00ff00', 2: '#0000ff'};
+        var colorIndex = 0;
+        window.onload = function () 
+        {
+			const balloon = document.getElementById('MyDiv');
+			balloon.addEventListener("click", moore);
+            balloon.addEventListener("mouseover", mini);
+            balloon.addEventListener("mouseout", mini);
+        }
+        function moore(){
+            size += 10;
+			if (size > 420) {
+				size = 200;
+			}
+			colorIndex++;
+			if (colorIndex >= 3) {
+				colorIndex = 0;
+			}
+            refreshBalloon(colorIndex);
+        }
+        function mini(){
+            if (size >= 205)
+            {
+                size -= 5;
+            }
+            colorIndex--;
+			if (colorIndex < 0) {
+				colorIndex = 2;
+			}
+            refreshBalloon(colorIndex);
+        }
+        function refreshBalloon(colorIndex) {
+			MyDiv.style.height = size + 'px';
+			MyDiv.style.width = size + 'px';
+            MyDiv.style.background = color[colorIndex];
+        }
+        </script>
+    </head>
+    <div id="MyDiv"></div>
+    <body>
+    </body>
+</html>

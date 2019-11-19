@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Calculator228
+        </title>
+        <script ENGINE="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script>
+                var calc;
+                var left;
+                var right;
+                var op;
+                $(document).ready(function() {
+                    calc = $("#calc");
+                    left = $("#first");
+                    right = $("#last");
+                    op = $("#op");
+                    calc.submit(submit);
+                    setInterval("alert('Please, use me...')", 30000);
+                });
+                function numIsValid(l, r) {
+                    return l == parseInt(l, 10) && l >= 0 && r == parseInt(r, 10) && r >= 0;
+                }
+                function submit(event) {
+                    event.preventDefault();
+                    var l = Number(left.value);
+                    var r = Number(right.value);
+                    if (!numIsValid(left.value, right.value)) {
+                        alert("Error :(");
+                        return false;
+                    }
+                    switch (op.value) {
+                        case ('add'):
+                            result(l + r);
+                            break;
+                        case ('mul'):
+                            result(l * r);
+                            break;
+                        case ('div'):
+                            if (r === 0) {
+                                result("It’s over 9000!");
+                            } else {
+                                result(l / r);
+                            }
+                            break;
+                        case ('mod'):
+                            if (r === 0) {
+                                result("It’s over 9000!");
+                            } else {
+                                result(l / r);
+                            }
+                            break;
+                        case ('min'):
+                            result(l - r);
+                            break;
+                        default:
+                            result("operation not found");
+                            break;
+                    }
+                }
+                function result(res) {
+                    console.log(res);
+                    alert(res);
+                }
+            </script>
+    </head>
+        <body>
+            <div class="page">
+                <div class="calc">
+                    <div class="circle"></div>
+                    <h1>Calculator228</h1>
+                    <form action="" id="calc">
+                        <input type="text" id="first">
+                        <select id="op">
+                            <option value="add">+</option>
+                            <option value="min">-</option>
+                            <option value="mul">*</option>
+                            <option value="div">/</option>
+                            <option value="mod">%</option>
+                        </select>
+                        <input type="text" id="last">
+                        <input type="submit" id="submit" value="Try me!">
+                    </form>
+                </div>
+            </div>
+        </body>
+</html>

@@ -1,0 +1,56 @@
+h1 {
+    font-size: 2.0vw;
+    color: aqua;
+    opacity: 0.9;
+    text-shadow:blue 0 0 10px;
+}
+body {
+    background: url(https://storge.pic2.me/cm/3200x1800/784/5ba1443d7e6f5.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+table {
+    width: auto;
+}
+td {
+    border-radius: 7px;
+    width: 150px;
+    height: 60px;
+}
+.word
+{
+    font-size: 1.5vw;
+    font-weight: bold;
+    text-align: center;
+}
+.num {
+    font-weight: small;
+    vertical-align: bottom;
+    font-size: 0.7vw;
+}
+.shit {
+    font-weight: small;
+    vertical-align: top;
+    text-align:right;
+    font-size: 0.5vw;
+}
+.fio {
+    background: plum;
+    opacity: 0.9;
+}
+.green {
+    background: greenyellow;
+    opacity: 0.9;
+}
+.blur {
+    background: lightseagreen;
+    opacity: 0.9;
+}
+.invisible {
+    color: white;
+    background: white;
+    opacity: 0.0;
+}
+.lgreen {
+    background:aqua;
+    opacity: 0.75;
+}
